@@ -1,38 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>子供英会話教室イングリッシュストーン: ペブル先生と通話</title>
-    <!-- Tailwind CSS CDN for easy styling -->
+    <!-- Tailwind CSS CDNを読み込み、スタイリングを簡単にします -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom styles for the Inter font and overall aesthetics */
+        /* Interフォントと全体的な美観のためのカスタムスタイル */
         body {
             font-family: 'Inter', sans-serif;
-            /* Set the background image for Professor Pebble */
-            background-image: url('https://content-fetcher.google-genai.com/api/files/image_c869d9.png-721607df-9398-4655-89e4-a3c93292b267'); /* Professor Pebble's actual background image */
-            background-size: cover; /* Cover the entire viewport */
-            background-position: center; /* Center the background image */
-            background-repeat: no-repeat; /* Do not repeat the image */
-            background-attachment: fixed; /* Keep the background fixed when scrolling */
-            background-color: #e0e0e0; /* Fallback background color */
+            /* ペブル先生の背景画像を設定します */
+            background-image: url('https://content-fetcher.google-genai.com/api/files/image_c869d9.png-721607df-9398-4655-89e4-a3c93292b267'); /* ペブル先生の実際の背景画像 */
+            background-size: cover; /* ビューポート全体をカバー */
+            background-position: center; /* 背景画像を中央に配置 */
+            background-repeat: no-repeat; /* 画像を繰り返さない */
+            background-attachment: fixed; /* スクロール時に背景を固定 */
+            background-color: #e0e0e0; /* フォールバックの背景色 */
         }
-        /* Ensure the Voiceflow widget is visible and not hidden by other elements */
+        /* Voiceflowウィジェットが他の要素に隠れないようにします */
         .voiceflow-chat-widget {
-            z-index: 9999; /* High z-index to ensure it's on top when opened */
+            z-index: 9999; /* 開いたときに一番上に表示されるように高いz-indexを設定 */
         }
     </style>
 
-    <!-- Google Analytics Global Site Tag (gtag.js) -->
-    <!-- CORRECTED: Using G-6P1WP8QRRP -->
+    <!-- Google Analytics グローバルサイトタグ (gtag.js) -->
+    <!-- G-6P1WP8QRRP を使用 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6P1WP8QRRP"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-6P1WP8QRRP'); // CORRECTED: Using G-6P1WP8QRRP
+      gtag('config', 'G-6P1WP8QRRP'); // G-6P1WP8QRRP を使用
     </script>
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen p-4">
@@ -51,29 +51,29 @@
         </p>
     </div>
 
-    <!-- Voiceflow Chatbot Embed Code for Professor Pebble -->
+    <!-- ペブル先生のためのVoiceflowチャットボット埋め込みコード -->
     <script type="text/javascript">
         (function(d, t) {
             var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
             v.onload = function() {
-                // Initialize the Voiceflow chat widget for Professor Pebble
+                // ペブル先生のVoiceflowチャットウィジェットを初期化します
                 window.voiceflow.chat.load({
-                    verify: { projectID: '686b4a197aa350d9b6d3a3d8' }, // Professor Pebble's Voiceflow Project ID
-                    url: 'https://general-runtime.voiceflow.com', // Voiceflow runtime URL
-                    versionID: 'production', // Use the production version of his agent
+                    verify: { projectID: '688acac6383e983b5f35d47c' }, // ペブル先生の新しいVoiceflowプロジェクトID
+                    url: 'https://general-runtime.voiceflow.com', // VoiceflowランタイムURL
+                    versionID: 'production', // エージェントのプロダクションバージョンを使用
                     voice: {
-                        url: "https://runtime-api.voiceflow.com" // Voice API URL for voice interactions
+                        url: "https://runtime-api.voiceflow.com" // 音声対話のためのVoice API URL
                     }
                 });
             }
-            // Set the source and type for the Voiceflow widget bundle
+            // Voiceflowウィジェットバンドルのソースとタイプを設定します
             v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
             v.type = "text/javascript";
-            // Insert the script into the document
+            // スクリプトをドキュメントに挿入します
             s.parentNode.insertBefore(v, s);
         })(document, 'script');
 
-        // Update the status message to indicate the chatbot should be visible
+        // チャットボットが表示されることを示すステータスメッセージを更新します
         document.addEventListener('DOMContentLoaded', () => {
             const statusMessageElement = document.getElementById('statusMessage');
             if (statusMessageElement) {
